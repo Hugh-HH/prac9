@@ -13,6 +13,7 @@ vector <string> op;
 deque <string> result;
 
     while(!cin.eof()) {
+
         string cItem;
         cin >> cItem;
 
@@ -28,8 +29,7 @@ deque <string> result;
         else{
             cout << "Error"<< endl;
             return -1;
-        }
-
+        } 
     }
 
     if(op.size() != num.size() - 1) { 
@@ -60,14 +60,15 @@ deque <string> result;
             }
         }
 
+
         else if(op[i] == "+" || op[i] == "-") {
             counter ++;
 
             if (op[i] == "+"){
-                integer_result += num[j];
+                (integer_result += num[j]);
             }
             else if (op[i] == "-"){
-                integer_result -= num[j];
+                (integer_result -= num[j]);
             }
         }
         
@@ -94,9 +95,6 @@ string h;
 
         else {h += result[i];}
     }
-
-
-
 std::cout << h << " =" << " " << integer_result;
 
 }
